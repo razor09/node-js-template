@@ -15,7 +15,7 @@
     }
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run lint && git add --all"
+    "pre-commit": "npm run lint"
   },
   "prettier": {
     "printWidth": 120,
@@ -24,7 +24,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@types/node": "20.11.20",
+    "@types/node": "20.11.21",
     "nodemon": "3.1.0",
     "npm-check-updates": "16.14.15",
     "prettier": "3.2.5",
