@@ -24,8 +24,8 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "@types/node": "20.12.12",
-    "nodemon": "3.1.0",
+    "@types/node": "20.12.13",
+    "nodemon": "3.1.2",
     "npm-check-updates": "16.14.20",
     "prettier": "3.2.5",
     "simple-git-hooks": "2.11.1",
