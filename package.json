@@ -1,0 +1,36 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/entry/main.ts",
+    "serve": "node dist/entry/main.js",
+    "build": "rm -rf dist && tsc && tsc-alias",
+    "fetch": "rm -rf node_modules && npm ci",
+    "lint": "prettier --write '**/*.{js,ts}'",
+    "update:soft": "ncu -u && npm install",
+    "update:hard": "ncu -u && rm -rf node_modules package-lock.json && npm install"
+  },
+  "nodemonConfig": {
+    "execMap": {
+      "ts": "node --import ./tools/esm.js"
+    }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run lint && git add --all"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "@types/node": "22.7.7",
+    "nodemon": "3.1.7",
+    "npm-check-updates": "17.1.4",
+    "prettier": "3.3.3",
+    "simple-git-hooks": "2.11.1",
+    "ts-node": "10.9.2",
+    "tsc-alias": "1.8.10",
+    "typescript": "5.6.3"
+  }
+}
